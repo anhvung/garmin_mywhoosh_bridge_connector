@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mywhoosh-garmin-bridge"
+version = "0.1.0"
+description = "Sync indoor trainer rides from intervals.icu to Garmin Connect as Edge 840 activities"
+requires-python = ">=3.11"
+dependencies = [
+    "fit-tool>=0.9",
+    "garminconnect>=0.3",
+    "python-dotenv>=1.0",
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+mywhoosh-garmin-bridge = "mywhoosh_garmin_bridge.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["mywhoosh_garmin_bridge*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

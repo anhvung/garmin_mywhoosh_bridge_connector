@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.data/
+garmin_tokens.json
+*.fit
+*.fit.gz
+.pytest_cache/
+mywhoosh_garmin_bridge.egg-info/
